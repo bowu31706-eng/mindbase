@@ -1,0 +1,91 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/chat/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/profile/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/note/edit",
+      "style": {
+        "navigationBarTitleText": "编辑笔记",
+        "navigationBarBackgroundColor": "#10101e",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/note/detail",
+      "style": {
+        "navigationBarTitleText": "笔记详情",
+        "navigationBarBackgroundColor": "#10101e",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/tags/index",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/stats/index",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/favorites/index",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/trash/index",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/public/note",
+      "style": {
+        "navigationBarTitleText": "分享的笔记",
+        "navigationBarBackgroundColor": "#10101e",
+        "navigationBarTextStyle": "white"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#94a3b8",
+    "selectedColor": "#6366f1",
+    "backgroundColor": "#10101e",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index",   "text": "知识库" },
+      { "pagePath": "pages/chat/index",    "text": "问答"   },
+      { "pagePath": "pages/search/index",  "text": "搜索"   },
+      { "pagePath": "pages/profile/index", "text": "我的"   }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#10101e",
+    "backgroundColor": "#09091a"
+  }
+}

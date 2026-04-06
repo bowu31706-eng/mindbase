@@ -1,0 +1,24 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic>=2.9
+pydantic-settings>=2.5
+
+# Supabase
+supabase
+
+# AI
+openai>=1.0          # DeepSeek 兼容 OpenAI SDK
+zhipuai              # 智谱 Embedding
+
+# 内容解析
+httpx
+beautifulsoup4
+readability-lxml
+lxml
+pymupdf              # PDF 解析
+
+# 工具
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]

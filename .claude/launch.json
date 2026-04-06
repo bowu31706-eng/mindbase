@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "frontend-h5",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:h5"],
+      "cwd": "D:\\求职全过程\\MindBase\\frontend",
+      "port": 5173,
+      "autoPort": false
+    }
+  ]
+}
