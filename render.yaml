@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: mindbase
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: SUPABASE_URL
+        value: https://mruirdauvjasqzchjiyj.supabase.co
+      - key: SUPABASE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ydWlyZGF1dmphc3F6Y2hqaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzNjcwOTYsImV4cCI6MjA5MDk0MzA5Nn0.0f68GQup4BA92hHcI2a3Te-eQqJWmXhhOOEUm_irgjE
+      - key: SUPABASE_SERVICE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ydWlyZGF1dmphc3F6Y2hqaXlqIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTM2NzA5NiwiZXhwIjoyMDkwOTQzMDk2fQ.s01cqObDrEkujQQXEpciOA8fzU_-UMk3FoEPYthAUOA
+      - key: DEEPSEEK_API_KEY
+        value: sk-33e870208f0f49019fefe3c4a02a587d
+      - key: DEEPSEEK_BASE_URL
+        value: https://api.deepseek.com
+      - key: ZHIPU_API_KEY
+        value: 777dc6b486444c41aca5477f0efcf0f1.NwKUhCs6XSWkHwlR
+      - key: JWT_SECRET
+        value: mindbase-super-secret-jwt-key-2024
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: JWT_EXPIRE_MINUTES
+        value: 10080
+      - key: APP_ENV
+        value: production
+      - key: CORS_ORIGINS
+        value: "*"
