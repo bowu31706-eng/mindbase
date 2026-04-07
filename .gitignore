@@ -40,3 +40,5 @@ frontend.log
 # Test files
 test_out.txt
 test_register.json
+
+.vercel

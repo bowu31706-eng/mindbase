@@ -1,6 +1,5 @@
-const BASE_URL = process.env.NODE_ENV === 'development'
-  ? 'http://localhost:8000/api/v1'
-  : 'https://your-api-domain.com/api/v1'  // 替换为正式域名
+const BASE_URL = import.meta.env.VITE_API_URL ||
+  (import.meta.env.DEV ? 'http://localhost:8000/api/v1' : '/api/v1')
 
 function getToken() {
   return uni.getStorageSync('token') || ''
