@@ -13,4 +13,4 @@ def get_supabase() -> Client:
 def get_supabase_admin() -> Client:
     """Service role client — 用于绕过 RLS，仅在后端内部使用"""
     settings = get_settings()
-    return create_client(settings.supabase_url, settings.supabase_service_key)
+    return create_client(settings.supabase_url, settings.effective_service_key)

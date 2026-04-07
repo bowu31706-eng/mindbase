@@ -15,7 +15,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 def create_token(user_id: str, email: str, settings) -> str:
     expire = datetime.utcnow() + timedelta(minutes=settings.jwt_expire_minutes)
     payload = {"sub": user_id, "email": email, "exp": expire}
-    return jwt.encode(payload, settings.jwt_secret, algorithm=settings.jwt_algorithm)
+    return jwt.encode(payload, settings.effective_jwt_secret, algorithm=settings.jwt_algorithm)
 
 
 @router.post("/register", response_model=TokenResponse)
