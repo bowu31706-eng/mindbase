@@ -21,9 +21,6 @@ export function request(options) {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           resolve(res.data)
         } else if (res.statusCode === 401) {
-          uni.removeStorageSync('token')
-          uni.removeStorageSync('user')
-          uni.reLaunch({ url: '/pages/login/index' })
           reject(new Error('未登录'))
         } else {
           const msg = res.data?.detail || '请求失败'
