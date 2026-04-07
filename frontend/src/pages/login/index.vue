@@ -238,7 +238,7 @@ async function wechatLogin() {
   display: block;
   font-size: 36px;
   font-weight: 800;
-  color: #f1f5f9;
+  color: var(--text-1);
   letter-spacing: -0.5px;
   margin-bottom: 12px;
 }
@@ -246,7 +246,7 @@ async function wechatLogin() {
 .brand-tagline {
   display: block;
   font-size: 16px;
-  color: rgba(241,245,249,0.55);
+  color: var(--text-2);
   margin-bottom: 48px;
   line-height: 1.6;
 }
@@ -263,12 +263,12 @@ async function wechatLogin() {
   align-items: center;
   gap: 14px;
   padding: 14px 18px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--border);
   border-radius: 12px;
 
   .f-icon { font-size: 20px; }
-  .f-text { font-size: 14px; color: rgba(241,245,249,0.7); }
+  .f-text { font-size: 14px; color: var(--text-2); }
 }
 
 /* ── Form Panel ───────────────────────────────────── */

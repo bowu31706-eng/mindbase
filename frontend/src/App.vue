@@ -3,13 +3,25 @@ import { onLaunch } from '@dcloudio/uni-app'
 import { useUserStore } from '@/store/user'
 import { useThemeStore } from '@/store/theme'
 
-onLaunch(() => {
-  const userStore = useUserStore()
+const DEMO_EMAIL = 'demo@mindbase.app'
+const DEMO_PASS  = 'mindbase2024'
+const DEMO_NAME  = 'Demo'
+
+onLaunch(async () => {
+  const userStore  = useUserStore()
   const themeStore = useThemeStore()
   themeStore.init()
 
   if (!userStore.isLoggedIn) {
-    uni.reLaunch({ url: '/pages/login/index' })
+    // 自动用 demo 账号登录，让访客无需注册即可体验
+    try {
+      await userStore.login(DEMO_EMAIL, DEMO_PASS)
+    } catch {
+      try {
+        await userStore.register(DEMO_EMAIL, DEMO_PASS, DEMO_NAME)
+      } catch {}
+    }
+    uni.reLaunch({ url: '/pages/index/index' })
   }
 })
 </script>
